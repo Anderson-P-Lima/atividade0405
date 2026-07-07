@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Darklady Calls</title>
+    <link rel="stylesheet" href="/atividade0405/static/css/main.css">
+    <script type="module" src="/atividade0405/static/js/main.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    <header role="banner">
+        <div class="container-header">
+            <div class="header-logo">
+                <img src="" alt="Brasão da Senhora Sombria" class="logo">
+            </div>
+            <div class="header-buttons">
+                <div class="header-auth">
+                    <button id="openLogin" class="btn-login" aria-label="Login">Entrar</button>
+                </div>
+                <div class="lang-dropdown">
+                    <button onclick="toggleLangMenu()" class="lang-btn">🌐 Português ▼</button>
+                    <div id="langMenu" class="lang-content">
+                        <a href="?lang=en" lang="en">English</a>
+                        <a href="?lang=pt-BR" lang="pt">Português</a>
+                        <a href="?lang=fr" lang="fr">Français</a>
+                        <a href="?lang=cn" lang="cn">官话</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <div class="container-body">
+            <div class="title">
+                <p>Subtitulo</p>
+                <h1>Titulo</h1>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Voluptates blanditiis ipsa at atque quidem ex voluptas totam, 
+                    cum eius quas, magni beatae! Adipisci praesentium ab maiores 
+                    provident illum nemo natus.
+                </p>
+                <div class="next-button">
+                    <button id="" class="">Saiba mais</button>
+                </div>
+            </div>
+        </div>
+        <span></span>
+        <div class="img-container">
+            <img src="" alt="" class="base-image">
+            <img src="" alt="" class="overlay">
+        </div>
+
+        <div id="loginModal" class="modal-overlay" aria-hidden="true">
+            <div class="modal-content">
+                <button id="closeModal" class="moda-close" aria-label="Fechar modal">&times;</button>
+                <div class="modal-header">
+                    <h2>Bem vindo de volta</h2>
+                    <p>Acesse sua conta para continuar</p>
+                </div>
+                <form action="" id="loginForm">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" class="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" class="password" placeholder="••••••••" required>
+                    </div>
+                    <div type="submit" class="btn-submit">Entrar</div>
+                </form>
+                <div class="modal-footer">
+                    <a href="#">Esqueci minha conta</a>
+                    <span>Não tem conta?<a href="#">Cadastre-se</a></span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container-footer">
+            <div class="contact-info">
+                <ul>
+                    <li><span>distance</span> Rua Exemplo, 123, Bairro, Cidade-UF</li>
+                    <li><span>call</span> (00) 0-0000-0000</li>
+                    <li><span>email</span>
+                        <a href="mailto:email@email.com"> email@email.com</a>    
+                    </li>
+                </ul>
+            </div>
+
+            <div class="about">
+                <h4>Sobre o Pacto</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Magni facere velit nam eius consectetur, explicabo earum 
+                    illum possimus mollitia ducimus facilis nisi sit, nostrum 
+                    dolorem voluptatem repellat quasi unde nesciunt!
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
