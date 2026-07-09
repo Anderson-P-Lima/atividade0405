@@ -11,21 +11,22 @@
     <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
     <header role="banner">
         <div class="container-header">
+            <span></span>
             <div class="header-logo">
-                <img src="" alt="Brasão da Senhora Sombria" class="logo">
+                <img src="/atividade0405/src/Sylvanas_Crest.png" alt="Brasão da Senhora Sombria" class="logo">
             </div>
             <div class="header-buttons">
-                <div class="header-auth">
-                    <button id="openLogin" class="btn-login" aria-label="Login">Entrar</button>
-                </div>
                 <div class="lang-dropdown">
-                    <button onclick="toggleLangMenu()" class="lang-btn">🌐 Português ▼</button>
+                    <button onclick="toggleLangMenu()" class="lang-btn">🌐</button>
                     <div id="langMenu" class="lang-content">
                         <a href="?lang=en" lang="en">English</a>
                         <a href="?lang=pt-BR" lang="pt">Português</a>
                         <a href="?lang=fr" lang="fr">Français</a>
-                        <a href="?lang=cn" lang="cn">官话</a>
+                        <a href="?lang=cn" lang="zh-CN">官话</a>
                     </div>
+                </div>
+                <div class="header-auth">
+                    <button id="openLogin" class="btn-login" aria-label="Login">Entrar</button>
                 </div>
             </div>
         </div>
@@ -34,28 +35,25 @@
     <main id="main-content" role="main">
         <div class="container-body">
             <div class="title">
-                <p>Subtitulo</p>
-                <h1>Titulo</h1>
+                <p class="subtitle">A Era da Rainha</p>
+                <h1>BEM-VINDOS À ERA DA RAINHA</h1>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Voluptates blanditiis ipsa at atque quidem ex voluptas totam, 
-                    cum eius quas, magni beatae! Adipisci praesentium ab maiores 
-                    provident illum nemo natus.
+                    A promessa de salvação que Azeroth esperava.
                 </p>
                 <div class="next-button">
-                    <button id="" class="">Saiba mais</button>
+                    <button id="" class="info-btn">O caminho começa aqui</button>
                 </div>
             </div>
         </div>
         <span></span>
         <div class="img-container">
-            <img src="" alt="" class="base-image">
-            <img src="" alt="" class="overlay">
+            <img src="" alt="" class="base-img">
+            <img src="" alt="" class="overlay-img">
         </div>
 
         <div id="loginModal" class="modal-overlay" aria-hidden="true">
             <div class="modal-content">
-                <button id="closeModal" class="moda-close" aria-label="Fechar modal">&times;</button>
+                <button id="closeModal" class="modal-close" aria-label="Fechar modal">&times;</button>
                 <div class="modal-header">
                     <h2>Bem vindo de volta</h2>
                     <p>Acesse sua conta para continuar</p>
@@ -69,11 +67,11 @@
                         <label for="password">Senha</label>
                         <input type="password" id="password" class="password" placeholder="••••••••" required>
                     </div>
-                    <div type="submit" class="btn-submit">Entrar</div>
+                    <button type="submit" class="btn-submit">Entrar</button>
                 </form>
                 <div class="modal-footer">
                     <a href="#">Esqueci minha conta</a>
-                    <span>Não tem conta?<a href="#">Cadastre-se</a></span>
+                    <span>Não tem conta? <a href="#">Cadastre-se</a></span>
                 </div>
             </div>
         </div>
@@ -94,10 +92,19 @@
             <div class="about">
                 <h4>Sobre o Pacto</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Magni facere velit nam eius consectetur, explicabo earum 
-                    illum possimus mollitia ducimus facilis nisi sit, nostrum 
-                    dolorem voluptatem repellat quasi unde nesciunt!
+                    <em>
+                        <strong>Termos de Uso e Termos do Pacto de Salvação:</strong>
+                         A participação na Era da Rainha e o ato de rendição total constituem 
+                         uma doação irrevogável e definitiva de sua vida física e espiritual 
+                         para o propósito singular de libertação da Rainha Sylvanas Windrunner 
+                         da Gorja. Não há garantias explícitas de salvação espiritual, beleza 
+                         eterna, prosperidade financeira ou outros benefícios. O culto e suas 
+                         entidades associadas não se responsabilizam por danos espirituais, 
+                         corrupção da alma, reencarnação indesejada e/ou outros efeitos colaterais. 
+                         Todos os bens materiais restantes serão confiscados. Ao aceitar este 
+                         pacto, você concorda com a rendição total sob as leis de Azeroth e sob 
+                         a supervisão da Gorja. Para dúvidas, entre em contato com seu recrutador.
+                    </em>
                 </p>
             </div>
         </div>
