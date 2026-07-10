@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Darklady Calls</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=language" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"><!-- family=font1&family=multi+name+font2&family=font3&display=swap"  -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=call,close,distance,language,mail,menu" /><!-- Requires alphabetical order to work -->
         <link rel="stylesheet" href="/static/css/main.css">
         <script type="module" src="/static/js/main.js"></script>
     </head>
@@ -56,7 +57,7 @@
 
             <div id="loginModal" class="modal-overlay" aria-hidden="true">
                 <div class="modal-content">
-                    <button id="closeModal" class="modal-close" aria-label="Fechar modal">&times;</button>
+                    <button id="closeLogin" class="modal-close" aria-label="Fechar modal">&times;</button>
                     <div class="modal-header">
                         <h2>Bem vindo de volta</h2>
                         <p>Acesse sua conta para continuar</p>
@@ -84,14 +85,15 @@
             <div class="container-footer">
                 <div class="contact-info">
                     <ul>
-                        <li><span>distance</span> Rua Exemplo, 123, Bairro, Cidade-UF</li>
-                        <li><span>call</span> (00) 0-0000-0000</li>
-                        <li><span>email</span>
-                            <a href="mailto:email@email.com"> email@email.com</a>    
+                        <li><span class="material-symbols-outlined">distance</span><span>Rua Exemplo, 123, Bairro, Cidade-UF</span></li>
+                        <li><span class="material-symbols-outlined">call</span><span>(00) 0-0000-0000</span></li>
+                        <li><span class="material-symbols-outlined">email</span>
+                            <span><a href="mailto:email@email.com">email@email.com</a></span>   
                         </li>
                     </ul>
                 </div>
                 <div class="contact-info">
+                    <h4><strong>Sobre</strong></h4>
                     <ul>
                         <li><a href="">Principal</a></li>
                         <li><a href="">Sobre</a></li>
