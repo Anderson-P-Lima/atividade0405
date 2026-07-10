@@ -1,113 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Darklady Calls</title>
-    <link rel="stylesheet" href="/atividade0405/static/css/main.css">
-    <script type="module" src="/atividade0405/static/js/main.js"></script>
-</head>
-<body>
-    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
-    <header role="banner">
-        <div class="container-header">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Darklady Calls</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=language" />
+        <link rel="stylesheet" href="/static/css/main.css">
+        <script type="module" src="/static/js/main.js"></script>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+        <header role="banner">
+            <div class="container-header">
+                <span></span>
+                <div class="header-logo">
+                    <img src="/src/Sylvanas_Crest.png" alt="Brasão da Senhora Sombria" class="logo">
+                </div>
+                <div class="header-buttons">
+                    <div class="lang-dropdown">
+                        <button onclick="toggleLangMenu()" class="lang-btn">
+                            <span class="material-symbols-outlined">language</span>
+                        </button>
+                        <div id="langMenu" class="lang-content">
+                            <a href="?lang=en" lang="en">English</a>
+                            <a href="?lang=pt-BR" lang="pt">Português</a>
+                            <a href="?lang=fr" lang="fr">Français</a>
+                            <a href="?lang=cn" lang="zh-CN">官话</a>
+                        </div>
+                    </div>
+                    <div class="header-auth">
+                        <button id="openLogin" class="btn-login" aria-label="Login">Entrar</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main id="main-content" role="main">
+            <div class="container-body">
+                <div class="title">
+                    <p class="subtitle">A Era da Rainha</p>
+                    <h1>BEM-VINDOS À ERA DA RAINHA</h1>
+                    <p>
+                        A promessa de salvação que Azeroth esperava.
+                    </p>
+                    <div class="next-button">
+                        <button id="" class="info-btn">O caminho começa aqui</button>
+                    </div>
+                </div>
+            </div>
             <span></span>
-            <div class="header-logo">
-                <img src="/atividade0405/src/Sylvanas_Crest.png" alt="Brasão da Senhora Sombria" class="logo">
+            <div class="img-container">
+                <img src="" alt="" class="base-img">
+                <img src="" alt="" class="overlay-img">
             </div>
-            <div class="header-buttons">
-                <div class="lang-dropdown">
-                    <button onclick="toggleLangMenu()" class="lang-btn">🌐</button>
-                    <div id="langMenu" class="lang-content">
-                        <a href="?lang=en" lang="en">English</a>
-                        <a href="?lang=pt-BR" lang="pt">Português</a>
-                        <a href="?lang=fr" lang="fr">Français</a>
-                        <a href="?lang=cn" lang="zh-CN">官话</a>
+
+            <div id="loginModal" class="modal-overlay" aria-hidden="true">
+                <div class="modal-content">
+                    <button id="closeModal" class="modal-close" aria-label="Fechar modal">&times;</button>
+                    <div class="modal-header">
+                        <h2>Bem vindo de volta</h2>
+                        <p>Acesse sua conta para continuar</p>
+                    </div>
+                    <form action="" id="loginForm">
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" class="email" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Senha</label>
+                            <input type="password" id="password" class="password" placeholder="••••••••" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Entrar</button>
+                    </form>
+                    <div class="modal-footer">
+                        <a href="#">Esqueci minha conta</a>
+                        <span>Não tem conta? <a href="#">Cadastre-se</a></span>
                     </div>
                 </div>
-                <div class="header-auth">
-                    <button id="openLogin" class="btn-login" aria-label="Login">Entrar</button>
+            </div>
+        </main>
+
+        <footer role="contentinfo">
+            <div class="container-footer">
+                <div class="contact-info">
+                    <ul>
+                        <li><span>distance</span> Rua Exemplo, 123, Bairro, Cidade-UF</li>
+                        <li><span>call</span> (00) 0-0000-0000</li>
+                        <li><span>email</span>
+                            <a href="mailto:email@email.com"> email@email.com</a>    
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <ul>
+                        <li><a href="">Principal</a></li>
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">Serviços</a></li>
+                        <li><a href="">Contato</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <main id="main-content" role="main">
-        <div class="container-body">
-            <div class="title">
-                <p class="subtitle">A Era da Rainha</p>
-                <h1>BEM-VINDOS À ERA DA RAINHA</h1>
-                <p>
-                    A promessa de salvação que Azeroth esperava.
-                </p>
-                <div class="next-button">
-                    <button id="" class="info-btn">O caminho começa aqui</button>
-                </div>
-            </div>
-        </div>
-        <span></span>
-        <div class="img-container">
-            <img src="" alt="" class="base-img">
-            <img src="" alt="" class="overlay-img">
-        </div>
-
-        <div id="loginModal" class="modal-overlay" aria-hidden="true">
-            <div class="modal-content">
-                <button id="closeModal" class="modal-close" aria-label="Fechar modal">&times;</button>
-                <div class="modal-header">
-                    <h2>Bem vindo de volta</h2>
-                    <p>Acesse sua conta para continuar</p>
-                </div>
-                <form action="" id="loginForm">
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" class="email" placeholder="seu@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Senha</label>
-                        <input type="password" id="password" class="password" placeholder="••••••••" required>
-                    </div>
-                    <button type="submit" class="btn-submit">Entrar</button>
-                </form>
-                <div class="modal-footer">
-                    <a href="#">Esqueci minha conta</a>
-                    <span>Não tem conta? <a href="#">Cadastre-se</a></span>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer role="contentinfo">
-        <div class="container-footer">
-            <div class="contact-info">
-                <ul>
-                    <li><span>distance</span> Rua Exemplo, 123, Bairro, Cidade-UF</li>
-                    <li><span>call</span> (00) 0-0000-0000</li>
-                    <li><span>email</span>
-                        <a href="mailto:email@email.com"> email@email.com</a>    
-                    </li>
-                </ul>
-            </div>
-
             <div class="about">
-                <h4>Sobre o Pacto</h4>
-                <p class="terms">
-                    <em>
-                        <strong>Termos do Pacto de Salvação:</strong>
-                         A participação na Era da Rainha e o ato de rendição total constituem 
-                         uma doação irrevogável e definitiva de sua vida física e espiritual 
-                         para o propósito singular de libertação da Rainha Sylvanas Windrunner 
-                         da Gorja. Não há garantias explícitas de salvação espiritual, beleza 
-                         eterna, prosperidade financeira ou outros benefícios. O culto e suas 
-                         entidades associadas não se responsabilizam por danos espirituais, 
-                         corrupção da alma, reencarnação indesejada e/ou outros efeitos colaterais. 
-                         Todos os bens materiais restantes serão confiscados. Ao aceitar este 
-                         pacto, você concorda com a rendição total sob as leis de Azeroth e sob 
-                         a supervisão da Gorja. Para dúvidas, entre em contato com seu recrutador.
-                    </em>
-                </p>
-            </div>
-        </div>
-    </footer>
-</body>
+                    <p class="terms">
+                        <em>
+                            <strong>Termos do Pacto de Salvação:</strong>
+                            A participação na Era da Rainha e o ato de rendição total constituem 
+                            uma doação irrevogável e definitiva de sua vida física e espiritual 
+                            para o propósito singular de libertação da Rainha Sylvanas Windrunner 
+                            da Gorja. Não há garantias explícitas de salvação espiritual, beleza 
+                            eterna, prosperidade financeira ou outros benefícios. O culto e suas 
+                            entidades associadas não se responsabilizam por danos espirituais, 
+                            corrupção da alma, reencarnação indesejada e/ou outros efeitos colaterais. 
+                            Todos os bens materiais restantes serão confiscados. Ao aceitar este 
+                            pacto, você concorda com a rendição total sob as leis de Azeroth e sob 
+                            a supervisão da Gorja. Para dúvidas, entre em contato com seu recrutador.
+                        </em>
+                    </p>
+                </div>
+        </footer>
+    </body>
 </html>

@@ -29,7 +29,7 @@
   --font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-family-serif: Georgia, serif;
 
-  --font-size-xs: 12px;
+  --font-size-xs:12px;
   --font-size-sm: 14px;
   --font-size-md: 16px;
   --font-size-lg: 24px;
@@ -136,11 +136,12 @@ header {
   border-radius: var(--space-xs);
   font-weight: 600;
   border: none;
+  box-shadow: 0px 8px 16px 0px rgba(255, 0, 0, 0.2);
   transition: background-color var(--transition-normal), transform var(--transition-fast);
 }
 .btn-login:hover {
-  background-color: var(--color-quaternary) !important;
-  color: var(--color-terciary-light) !important;
+  background-color: var(--color-primary-light) !important;
+  color: var(--color-quaternary) !important;
   border-left-color: var(--color-primary);
   cursor: pointer;
 }
@@ -158,6 +159,9 @@ header {
   border-radius: 4px;
   transition: background-color var(--transition-normal), transform var(--transition-fast);
 }
+.lang-btn span {
+  color: var(--color-primary-light);
+}
 .lang-content {
   display: none;
   position: absolute;
@@ -174,13 +178,15 @@ header {
   display: block;
 }
 .lang-content a:hover {
-  background-color: var(--color-text);
+  background-color: var(--color-primary-light);
+  border-radius: 5px;
+  box-shadow: 0 4px 0 0 rgba(255, 0, 0, 0.5);
 }
 .lang-dropdown:hover .lang-content {
   display: block;
 }
 .lang-dropdown:hover .lang-btn {
-  background-color: var(--color-text-light);
+  background-color: var(--color-quaternary-light);
 }
 
 /* ============================
@@ -188,6 +194,11 @@ header {
    ============================ */
 main {
   flex: 1;
+  background-image: url(/src/Sylvanas_bcgd.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
 }
 .container-body {
   max-width: 1200px;
@@ -195,43 +206,62 @@ main {
   padding: var(--space-md) var(--space-md);
 }
 .title {
-  width: 500px;
+  width: 600px;
 }
 .title .subtitle {
   margin-bottom: var(--space-lg);
   font-size: var(--font-size-sm);
 }
 .title h1 {
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-4xl);
 }
 .title p {
   margin: var(--space-1xl) 0;
-  font-size: var(--font-size-1xl);
+  font-size: var(--font-size-2xl);
 }
 .next-button {
   display: flex;
   flex-direction: column;
 }
 .info-btn {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-light);
   border: none;
   border-radius: 3px;
   padding: var(--space-md);
   box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);
   transition: background-color var(--transition-normal), transform var(--transition-slow);
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-lg);
   font-weight: 600;
 }
 .info-btn:hover{
-  background-color: var(--color-primary-light);
+  background-color: var(--color-primary);
   cursor:pointer;
   color: var(--color-quaternary);
+  box-shadow: 4px 4px 4px 4px rgba(255, 0, 0, 0.2);
 }
 main span {}
 .img-container {}
 .base-img {}
 .overlay-img {}
-.modal-overlay {}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.modal-overlay.active {
+  opacity:1;
+  visibility: visible;
+}
+.modal-content {}
 .modal-close {}
 .modal-header {}
 .modal-header h2 {}
@@ -254,22 +284,38 @@ main span {}
 footer {
   background-color: var(--color-navigation);
   color: var(--color-text);
+  margin-top: var(--space-xl);
+  padding: var(--space-1xl) var(--space-md);
 }
 .container-footer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--space-2xl) var(--space-md);
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-4xl);
+  padding-bottom: var(--space-1xl);
+  border-bottom: 1px solid var(--color-text);
+  margin-bottom: var(--space-1xl);
 }
 .contact-info {}
 .contact-info ul {
   list-style: none;
 }
-.contact-info li {}
+.contact-info a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color var(--transition-normal), transform var(--transition-slow);
+}
+.contact-info a:hover {
+  text-decoration: none;
+  color: var(--color-quaternary-light);
+}
 .contact-info span {}
 .contact-info span a {}
-.about {}
-.about h4 {}
+.about {
+  max-width: 1400px;
+  margin: var(--space-lg) auto;
+}
 .terms {
   font-size: var(--font-size-xs);
 }
