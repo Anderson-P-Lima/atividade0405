@@ -1,0 +1,38 @@
+main {
+    background-image: url(/src/page_04_bcgd.png);
+}
+
+.title {
+    width: 800px;
+    height: 558px;
+    color: var(--color-primary-light);
+}
+
+.paragraph {
+    width: 600px;
+}
+
+.next-button {
+    padding: var(--space-1xl) 0 var(--space-2xl);
+}
+
+/* ============================
+        RESPONSIVE DESIGN
+   ============================ */
+/* TABLETS */
+@media screen and (max-width:768px) {
+    .title h1 {
+        max-width: 600px;
+    }
+}
+
+/* PHONES */
+@media screen and (max-width:520px) {
+    .title {
+        height: auto;
+    }
+    .next-button{
+        margin: 0;
+        padding: 0;
+    }
+}

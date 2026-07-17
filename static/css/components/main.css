@@ -1,0 +1,88 @@
+main {
+  flex: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container-body {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: var(--space-1xl) var(--space-md) var(--space-2xl);
+}
+
+.title {
+  font-family: var(--font-family-serif);
+}
+
+.subtitle {
+  margin-bottom: var(--space-lg);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+}
+
+.title h1 {
+  font-size: var(--font-size-4xl);
+  text-transform: uppercase;
+}
+
+.paragraph {
+  margin: var(--space-1xl) 0;
+  font-size: var(--font-size-1xl);
+  font-weight: 600;
+}
+
+.info-btn {
+  width: 500px;
+  background-color: var(--color-quaternary-light);
+  color: var(--color-primary-light);
+  border: none;
+  border-radius: 3px;
+  padding: var(--space-md);
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.3);
+  transition: background-color var(--transition-slow), transform var(--transition-slow);
+  font-size: var(--font-size-lg);
+  font-weight: 900;
+  font-family: var(--font-family-serif);
+}
+
+.info-btn:hover {
+  background-color: var(--color-primary-light);
+  cursor: pointer;
+  color: var(--color-quaternary);
+  box-shadow: 0px 4px 16px 4px rgba(255, 0, 0, 0.2);
+}
+
+/* ============================
+        RESPONSIVE DESIGN
+   ============================ */
+/* TABLETS */
+@media (max-width:768px) {
+  .container-body {
+        height: 850px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+  .title h1 {
+    max-width: 700px;
+  }
+}
+
+/* PHONES */
+@media screen and (max-width:520px) {
+  .container-body {
+    height: auto;
+  }
+  .title h1 {
+    max-width: 270px;
+    font-size: var(--font-size-1xl);
+  }
+  .paragraph {
+    max-width: 270px;
+    font-size: var(--font-size-lg);
+  }
+  .info-btn {
+    width: 300px;
+  }
+}

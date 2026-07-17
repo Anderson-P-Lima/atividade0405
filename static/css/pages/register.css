@@ -1,0 +1,157 @@
+main {
+    background-image: url(/src/register_bcgd.png);
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content {
+    margin: 100px auto;
+    width: 600px;
+    max-width: 90%;
+    background-color: var(--color-navigation);
+    color: var(--color-primary-light);
+    padding: var(--space-1xl);
+    border-radius: var(--space-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.form-header h2 {
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-xs);
+}
+
+.form-header p {
+  font-size: var(--font-size-sm);
+  opacity: 0.9;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-primary-light);
+  margin-bottom: 0.15rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group input[type="date"] {
+  padding-left: 10px;
+  background-color: var(--color-primary);
+  color: var(--color-text-light); 
+  border: 1px solid transparent;
+  border-radius: 4px;
+  min-height: var(--space-1xl);
+  font-weight: 600;
+  font-family: var(--font-family-sans);
+  transition: border-color var(--transition-normal);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--color-quaternary-light);
+  box-shadow: 0 0 4px rgba(255, 0, 0, 0.3);
+}
+
+.form-group input::placeholder,
+.form-group select::placeholder {
+  font-size: var(--space-md);
+  opacity: 0.7;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23FF6B6B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.form-group .radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+.form-group input[type="radio"] {
+  margin-right: 0.rem;
+  accent-color: var(--color-quaternary-light);
+}
+
+.form-group input[type="radio"] + label {
+  margin-right: 1rem;
+  font-weight: 400;
+  font-size: var(--font-size-sm);
+  display: inline;
+}
+
+#radio-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-content > form > p {
+  text-align: center;
+  font-size: 0.85rem;
+  margin: var(--space-md) 0;
+}
+
+.form-content > form > p a {
+  color: var(--color-quaternary-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form-content > form > p a:hover {
+  text-decoration: underline;
+}
+
+.btn-submit {
+  width: 100%;
+  margin: var(--space-md) 0;
+  padding: var(--space-sm);
+  background-color: var(--color-quaternary-light);
+  color: var(--color-primary-light);
+  border-radius: 4px;
+  border-style: none;
+  font-weight: 700;
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-md);
+  transition: var(--transition-normal);
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-quaternary);
+  box-shadow: 0 4px 8px 4px rgba(255, 0, 0, 0.5);
+}
+/* ============================
+        RESPONSIVE DESIGN
+   ============================ */
+@media screen and (max-width: 520px) {
+  .form-content {
+    width: 95%;
+    padding: var(--space-md);
+  }
+}
