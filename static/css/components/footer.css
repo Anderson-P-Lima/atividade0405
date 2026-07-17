@@ -49,7 +49,7 @@ footer {
         RESPONSIVE DESIGN
    ============================ */
 /* PHONES */
-@media screen and (max-width:415px) {
+@media screen and (max-width:520px) {
   .container-footer{
     flex-direction: column-reverse;
     gap: var(--space-md);

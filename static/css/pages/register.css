@@ -149,7 +149,7 @@ main {
 /* ============================
         RESPONSIVE DESIGN
    ============================ */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
   .form-content {
     width: 95%;
     padding: var(--space-md);
