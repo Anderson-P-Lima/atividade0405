@@ -1,0 +1,113 @@
+header {
+    background-color: var(--color-navigation);
+    border-bottom: 2px solid var(--color-border);
+    position:sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: var(--shadow-sm);
+}
+.container-header {
+    max-width: 1600px;
+    height: 4rem;
+    margin: 0 auto;
+    padding: var(--space-1xxl) var(--space-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.header-project-name {
+    width:180px;
+    color: var(--color-primary-light);
+    font-family: var(--font-family-serif);
+    font-weight: 600;
+    font-size: var(--font-size-lg);
+    text-shadow:
+        10px 8px 18px rgba(255, 0, 0, 0.4);
+}
+.header-logo {
+    margin-top: var(--space-2xl);
+}
+.header-logo img {
+    width: 8rem;
+}
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.header-auth {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-login {
+    background-color: var(--color-quaternary-light);
+    color: var(--color-white);
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--space-xs);
+    font-weight: 600;
+    border: none;
+    box-shadow: var(--shadow-red-lg);
+    transition: background-color var(--transition-normal), transform var(--transition-fast);
+}
+.btn-login:hover {
+    background-color: var(--color-primary-light) !important;
+    color: var(--color-quaternary) !important;
+    border-left-color: var(--color-primary);
+    cursor: pointer;
+}
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+}
+.lang-btn {
+    background-color: transparent;
+    color: black;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color var(--transition-normal), transform var(--transition-fast);
+}
+.lang-btn span {
+    color: var(--color-primary-light);
+}
+.lang-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 130px;
+    box-shadow: var(--shadow-red-lg);
+    z-index: 1;
+    border-radius: 4px;
+    font-weight: 500;
+}
+.lang-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.lang-content a:hover {
+    background-color: var(--color-primary-light);
+    border-radius: 5px;
+    box-shadow: var(--shadow-red-md);
+}
+.lang-dropdown:hover .lang-content {
+    display: block;
+}
+.lang-dropdown:hover .lang-btn {
+    background-color: var(--color-quaternary-light);
+}
+
+/* ============================
+        RESPONSIVE DESIGN
+   ============================ */
+
+   /* PHONES */
+@media screen and (max-width:415px) {
+  .header-logo {
+    display: none;
+  }
+}

@@ -1,0 +1,53 @@
+:root {
+  --color-primary: #f7eabc;
+  --color-primary-light: #fcf8e8;
+  --color-primary-dark: #f7eabc;
+  --color-secondary: #b2f7e5;
+  --color-secondary-light: #d2f7ed;
+  --color-terciary: #cb9dfc;
+  --color-terciary-light: #e6d2fc;
+  --color-quaternary: #4a0c0c;
+  --color-quaternary-light: #9e3333;
+  --color-navigation: #1f1f20;
+  --color-text: #e7e5e5;
+  --color-text-dark: #1a1a1a;
+  --color-text-light: #666666;
+  --color-background-blur: rgba(55,55,55,0.6);
+  --color-border: #e0e0e0;
+  --color-white: #ffffff;
+  --color-accent: #ff6b35;
+  --color-success: #10b981;
+  --color-focus: #0052cc;
+  
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-1xl: 2rem;
+  --space-1xxl:3rem;
+  --space-2xl: 4.5rem;
+  --space-3xl: 6rem;
+  --space-4xl: 12rem;
+  
+  --font-family-sans: -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-family-serif: "Italiana", Georgia, serif;
+
+  --font-size-xs:12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 24px;
+  --font-size-1xl: 32px;
+  --font-size-2xl: 48px;
+  --font-size-3xl: 60px;
+  --font-size-4xl: 72px;
+  
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 500ms ease;
+  
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-red-md: 0 4px 4px rgba(255, 0, 0, 0.2);
+  --shadow-red-lg: 0px 8px 16px 0px rgba(255, 0, 0, 0.2);
+}

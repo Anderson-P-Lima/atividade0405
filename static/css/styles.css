@@ -1,0 +1,36 @@
+@import "/static/css/components/footer.css";
+@import "/static/css/components/header.css";
+@import "/static/css/components/reset.css";
+@import "/static/css/components/variables.css";
+@import "/static/css/components/modal.css";
+@import "/static/css/components/main.css";
+
+/* ============================
+            ACCESSIBILITY
+   ============================ */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-sm) var(--space-md);
+  text-decoration: none;
+  z-index: 100;
+  border-radius: 0 0 var(--space-sm) 0;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ============================
+        RESPONSIVE DESIGN
+   ============================ */
+/* TABLETS */
+@media screen and (max-width:768px) {}
+
+/* PHONES */
+@media screen and (max-width:415px) {}

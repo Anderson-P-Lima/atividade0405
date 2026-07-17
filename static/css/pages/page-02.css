@@ -1,0 +1,30 @@
+main {
+    background-image: url(/src/page_02a_bcgd.png);
+}
+
+.container-body {
+    padding-bottom: var(--space-md);
+}
+
+.title {
+    width: 800px;
+    height: 558px;
+}
+
+.paragraph {
+    width: 450px;
+}
+
+.next-button {
+    padding: var(--space-md) 0 var(--space-lg);
+}
+
+/* ============================
+        RESPONSIVE DESIGN
+   ============================ */
+/* PHONES */
+@media screen and (max-width:480px) {
+    .title {
+        height: auto;
+    }
+}

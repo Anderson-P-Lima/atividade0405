@@ -1,0 +1,67 @@
+footer {
+  background-color: var(--color-navigation);
+  color: var(--color-text);
+  margin-top: var(--space-xl);
+  padding: var(--space-1xl) var(--space-md);
+  border-top: 2px solid var(--color-border);
+}
+.container-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: var(--space-4xl);
+  padding-bottom: var(--space-1xl);
+  border-bottom: 1px solid var(--color-text);
+  margin-bottom: var(--space-1xl);
+}
+.contact-info ul {
+  list-style: none;
+  font-size: var(--font-size-sm);
+}
+.contact-info a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color var(--transition-normal), transform var(--transition-slow);
+}
+.contact-info a:hover {
+  text-decoration: none;
+  color: var(--color-quaternary-light);
+  border-bottom: 2px solid var(--color-quaternary-light);
+  border-radius: 4px;
+}
+.about {
+  max-width: 1400px;
+  margin: var(--space-lg) auto;
+}
+.contact-info .material-symbols-outlined{
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.terms {
+  font-size: var(--font-size-xs);
+}
+
+/* ============================
+        RESPONSIVE DESIGN
+   ============================ */
+/* PHONES */
+@media screen and (max-width:415px) {
+  .container-footer{
+    flex-direction: column-reverse;
+    gap: var(--space-md);
+  }
+  .contact-info h4{
+    display: flex;
+    justify-content: center;
+  }
+  .info {
+    display: flex;
+    margin: 10px 0;
+    gap: 20px;
+
+  }
+}
