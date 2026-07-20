@@ -4,20 +4,20 @@ class SiteForm extends HTMLElement {
             `<div class="form-container">
                 <div class="form-content">
                     <div class="form-header">
-                        <h2>Contrato de Rendição</h2>
-                        <p>Preencha o formulário para firmar o contrato</p>
+                        <h2>Contrato Pactual</h2>
+                        <p>Preencha o formulário para firmar o pacto</p>
                     </div>
                     <form action="" id="loginForm" method="POST">
                         <div class="form-group">
-                            <label for="email">Nome</label>
+                            <label for="name">Nome</label>
                             <input type="text" id="name" class="email" placeholder="Seu nome" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Sobrenome</label>
+                            <label for="last-name">Sobrenome</label>
                             <input type="text" id="last-name" class="email" placeholder="Seu sobrenome" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Raça</label>
+                            <label for="race">Raça</label>
                             <select id="race" name="race">
                                 <option value="" disabled selected hidden>Selecione uma opção</option>
                                 <option value="bde">Blood Elf</option>
@@ -57,14 +57,13 @@ class SiteForm extends HTMLElement {
                             <input type="email" id="email" class="email" placeholder="seu@email.com" required>
                         </div>
                         <div class="form-group">
-                            <label for="password">Senha</label>
-                            <input type="password" id="password" class="password" placeholder="Digite sua senha" required>
+                            <label for="password" class="password" placeholder="Digite sua senha" required>
                         </div>
                         <div class="form-group">
                             <label for="confirm-password">Confirmar Senha</label>
                             <input type="password" id="confirm-password" class="password" placeholder="Digite sua senha" required>
                         </div>
-                        <p>Ao se render a Chamada da Rainha Sombria, você concorda com nossos <a href="#terms">Termos e Política de Privacidade</a>.</p>
+                        <p>Ao se render a Chamada da Senhora Sombria, você concorda com nossos <a href="#terms">Termos e Política de Privacidade</a>.</p>
                         <button type="submit" class="btn-submit">Se render</button>
                     </form>
                 </div>
