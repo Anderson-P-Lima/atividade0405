@@ -1,12 +1,12 @@
 class SiteModal extends HTMLElement {
     connectedCallback() {
-        this.innerHTML = 
-            `<div id="loginModal" class="modal-overlay" aria-hidden="true">
+        this.innerHTML =
+            `<div id="loginModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
                 <div id="modalBox" class="modal-content">
                     <button id="closeLogin" class="modal-close" aria-label="Fechar modal">&times;</button>
                     <div class="modal-header">
-                        <h2>Bem vindo de volta</h2>
-                        <p>Acesse sua conta para continuar</p>
+                        <h2 id="modal-title">Bem vindo de volta</h2>
+                        <p id="modal-desc">Acesse sua conta para continuar</p>
                     </div>
                     <form action="" id="loginForm">
                         <div class="form-group">
@@ -25,31 +25,82 @@ class SiteModal extends HTMLElement {
                     </div>
                 </div>
             </div>`;
+        const modal = this.querySelector('#loginModal');
+        const closeBtn = this.querySelector('#closeLogin');
+        const modalBox = this.querySelector('#modalBox');
+        const emailInput = this.querySelector('#email');
+
         const openLogin = document.getElementById('openLogin');
-        const closeLogin = document.getElementById('closeLogin');
-        const modal = document.getElementById('loginModal');
-        const modalBox = document.getElementById('modalBox');
+        if (!openLogin) return;
 
         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 
-        function openModal() {
+        let previousActiveElement = null;
+
+        const getFocusableElements = () =>
+            modal.querySelectorAll(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+
+        const openModal = () => {
+            previousActiveElement = document.activeElement;
             modal.classList.add('active');
             modal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
             document.body.style.paddingRight = scrollbarWidth + 'px';
-        }
 
-        function closeModal() {
+            if (emailInput) emailInput.focus();
+
+            document.addEventListener('keydown', handleKeyDown);
+        };
+
+        const closeModal = () => {
             modal.classList.remove('active');
             modal.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = 'auto';
             document.body.style.paddingRight = '';
-        }
+            document.removeEventListener('keydown', handleKeyDown);
+
+            if (previousActiveElement) {
+                previousActiveElement.focus();
+            }
+        };
+
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+                return;
+            }
+
+            if (e.key === 'Tab') {
+                const focusable = Array.from(getFocusableElements());
+                if (focusable.length === 0) return;
+
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+
+                if (e.shiftKey) {
+                    if (document.activeElement === first) {
+                        e.preventDefault();
+                        last.focus();
+                    }
+                } else {
+                    if (document.activeElement === last) {
+                        e.preventDefault();
+                        first.focus();
+                    }
+                }
+            }
+        };
 
         openLogin.addEventListener('click', openModal);
-        closeLogin.addEventListener('click', closeModal);
-        modal.addEventListener('click', closeModal);
-        modalBox.addEventListener('click', (e) => e.stopPropagation());    
+        closeBtn.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        modalBox.addEventListener('click', (e) => e.stopPropagation());
     }
 }
 

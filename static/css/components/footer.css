@@ -41,8 +41,16 @@ footer {
   vertical-align: middle;
   margin-right: 8px;
 }
+.copyright{
+  text-align: center;
+  font-size: var(--font-size-sm);
+}
 .terms {
+  display: none;
   font-size: var(--font-size-xs);
+}
+#terms:target {
+  display: block;
 }
 
 /* ============================
