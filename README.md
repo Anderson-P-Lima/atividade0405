@@ -1,9 +1,4 @@
-**Breve Contexto:**
-No universo do jogo **World of Warcraft** existe um personagem com uma história conturbada chamado **Sylvanas Windrunner**, ex-líder de uma das duas facções principais.
-A criação deste projeto fictício simula a tentativa dos seguidores ainda leais de Sylvanas em convencer pessoas desse universo a sacrificarem suas vidas e almas para recuperação
-de sua líder da "Gorja", local dentro do jogo que mais se aproxima a noção do inferno.
-
-## Descrição do Projeto:
+# Descrição do Projeto:
 Sítio feito em 6 páginas, as 5 primeiras com breve informações a última contendo um formulário de cadastro.
 
 ### HEADER 
@@ -23,3 +18,8 @@ Sítio feito em 6 páginas, as 5 primeiras com breve informações a última con
 - Utilizado a **API do Google Fonts** para os ícones e fontes usados no projeto.
 ### IMAGEMS
 - As imagens de fundo foram criadas utilizando a I.A. **Gemini** do **Google**.
+
+## Breve Contexto: ##
+No universo do jogo **World of Warcraft** existe um personagem com uma história conturbada chamado **Sylvanas Windrunner**, ex-líder de uma das duas facções principais.
+A criação deste projeto fictício simula a tentativa dos seguidores ainda leais de Sylvanas em convencer pessoas desse universo a sacrificarem suas vidas e almas para recuperação
+de sua líder da "Gorja", local dentro do jogo que mais se aproxima a noção do inferno.
