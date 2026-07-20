@@ -6,7 +6,7 @@ Sítio feito em 6 páginas, as 5 primeiras com breve informações a última con
 - O **botão de LINGUAS** é somente visual, porém possui **conformidade ARIA**.
 - O **botão de ENTRAR** abre um **formulário modal**.
 ### MODAL
-- O **MODAL** é somente visual, o **"X"* possui funcionalidade para fechamento e atuar o cursor fora do modal também aciona o fechamento do mesmo.
+- O **MODAL** é somente visual, o **"X"** possui funcionalidade para fechamento e atuar o cursor fora do modal também aciona o fechamento do mesmo.
 ### MAIN
 - O **BOTÃO vermelho** leva a próxima página.
 - Na última página (**register.html**) há um encadeamento em **TERMOS E POLÍTICA DE PRIVACIDADE** que torna visível um parágrafo escondido no **FOOTER**.
